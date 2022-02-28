@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/mdb.min.js": "/js/mdb.min.js",
+    "/js/admin/main.js": "/js/admin/main.js",
+    "/js/assets/navbar.js": "/js/assets/navbar.js",
+    "/js/login/login.js": "/js/login/login.js",
+    "/css/login/login.css": "/css/login/login.css",
+    "/css/assets/navbar.css": "/css/assets/navbar.css",
+    "/css/admin/main.css": "/css/admin/main.css",
+    "/css/mdb.min.css": "/css/mdb.min.css",
+    "/css/app.css": "/css/app.css"
+}
