@@ -4,9 +4,6 @@ window.jQuery = require('jquery');
 
 window.$ = jQuery;
 
-
-window.sweetModal = require('sweet-modal');
-
 window.mdb = require('moment');
 
 window.Swal = require('sweetalert2')
