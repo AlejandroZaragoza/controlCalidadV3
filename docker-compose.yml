@@ -26,6 +26,7 @@ services:
             - redis
             - meilisearch
             - selenium
+            - sql-server-db
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
@@ -80,6 +81,12 @@ services:
         image: 'selenium/standalone-chrome'
         volumes:
             - '/dev/shm:/dev/shm'
+        networks:
+            - sail
+    mssql:
+        image: 'alexzaragoza/mssql'
+        ports:
+            - "1433:1433"
         networks:
             - sail
 networks:
