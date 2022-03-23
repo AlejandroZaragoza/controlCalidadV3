@@ -27,11 +27,53 @@ Este proyecto esta construido a base de [Laravel Sail](https://laravel.com/docs/
 -[Node](https://formulae.brew.sh/formula/node#default "Node")<!-- pagebreak -->
 
 ### Linux
-
+-[PhP 8.1](https://www.php.net/downloads.php#gpg-8.0 "PhP 8.1")<!-- pagebreak -->
+-[Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+-[Docker Compose](https://docs.docker.com/compose/install/ "Docker Desktop")<!-- pagebreak -->
+-[Node](https://snapcraft.io/node "Node")<!-- pagebreak -->
 
 ###Windows
+-[Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+-[Docker Desktop](https://www.docker.com/products/docker-desktop/ "Docker Desktop")<!-- pagebreak -->
+-[WSL](https://docs.microsoft.com/en-us/windows/wsl/install "WSL")<!-- pagebreak -->
+-[Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab "Windows Terminal")<!-- pagebreak -->
+-[Node](https://nodejs.org/es/download/ "Node")<!-- pagebreak -->
 
 ##Instalacion
+
+1.- Abrir el terminal y clonar el repositorio GitHub
+
+```
+$ git clone git@github.com:AlejandroZaragoza/controlCalidadV3.git
+```
+2.- Copiar el archivo de entorno .env.example a .env
+
+```
+$ cd controlCalidadV3/
+$ cp .env.example .env
+```
+3.- Instalar dependencias, configurar librerias y generar llave de aplicacion
+
+```
+$ composer install
+$ npm install
+$ php artisan key:generate
+```
+3.1.- Usuarios de Windows y MacOs deben iniciar docker desktop antes del siguiente paso.
+
+4.- Iniciar los servicios
+
+```
+$ ./vendor/bin/sail up
+```
+
+Una vez inicializados todos los contenedores Docker la aplicacion estara disponible en http://localhost.
+
+Importar la base de datos y los usuarios por defecto.
+
+```
+$ ./vendor/bin/sail artisan migrate:fresh --seed
+```
 
 ##Arquitectura
 
