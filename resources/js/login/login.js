@@ -1,4 +1,8 @@
 /*$(document).ready(function () {
-     alert(); 
+     alert();
     $(":input").val(null);
 });*/
+
+$("#formLogin1").on("focusout", function(event){
+    event.preventDefault();
+});

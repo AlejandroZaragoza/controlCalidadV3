@@ -16,6 +16,11 @@ class loginController extends Controller
         return view('login.login');
     }
 
+
+    public function login(Request $request){
+        return response()->json($request);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
