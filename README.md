@@ -3,6 +3,20 @@
   <img src="/public/img/SmartDotLogo.png" />
 </p>
 
+- [Control de calidad](#control-de-calidad)
+  - [Disclaimer](#disclaimer)
+  - [Quote](#quote)
+  - [Prerequisites](#prerequisites)
+    - [MacOs](#macos)
+    - [Linux](#linux)
+    - [Windows](#windows)
+  - [Instalacion](#instalacion)
+  - [Arquitectura](#arquitectura)
+  - [Gato ninja](#gato-ninja)
+  - [Powered by](#powered-by)
+  - [License](#license)
+
+------------
 
 ## Disclaimer
 Este proyecto es creado con fines educativos y bajo ninguna circunstancia debe llevarse a un ambiente de producción.
@@ -21,25 +35,25 @@ Este proyecto es creado con fines educativos y bajo ninguna circunstancia debe l
 Este proyecto esta construido a base de [Laravel Sail](https://laravel.com/docs/9.x/sail "Laravel Sail"), debido a que la intencion de este proyecto es educativa solo se muestran los pasos para construir el ambiente local.
 
 ### MacOs
--[PhP 8.1](https://formulae.brew.sh/formula/php "PhP 8.1")<!-- pagebreak -->
--[Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
--[Docker Desktop](https://docs.docker.com/desktop/mac/install/ "Docker Desktop")<!-- pagebreak -->
--[Node](https://formulae.brew.sh/formula/node#default "Node")<!-- pagebreak -->
+- [PhP 8.1](https://formulae.brew.sh/formula/php "PhP 8.1")<!-- pagebreak -->
+- [Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+- [Docker Desktop](https://docs.docker.com/desktop/mac/install/ "Docker Desktop")<!-- pagebreak -->
+- [Node](https://formulae.brew.sh/formula/node#default "Node")<!-- pagebreak -->
 
 ### Linux
--[PhP 8.1](https://www.php.net/downloads.php#gpg-8.0 "PhP 8.1")<!-- pagebreak -->
--[Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
--[Docker Compose](https://docs.docker.com/compose/install/ "Docker Desktop")<!-- pagebreak -->
--[Node](https://snapcraft.io/node "Node")<!-- pagebreak -->
+- [PhP 8.1](https://www.php.net/downloads.php#gpg-8.0 "PhP 8.1")<!-- pagebreak -->
+- [Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+- [Docker Compose](https://docs.docker.com/compose/install/ "Docker Desktop")<!-- pagebreak -->
+- [Node](https://snapcraft.io/node "Node")<!-- pagebreak -->
 
-###Windows
--[Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
--[Docker Desktop](https://www.docker.com/products/docker-desktop/ "Docker Desktop")<!-- pagebreak -->
--[WSL](https://docs.microsoft.com/en-us/windows/wsl/install "WSL")<!-- pagebreak -->
--[Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab "Windows Terminal")<!-- pagebreak -->
--[Node](https://nodejs.org/es/download/ "Node")<!-- pagebreak -->
+### Windows
+- [Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/ "Docker Desktop")<!-- pagebreak -->
+- [WSL](https://docs.microsoft.com/en-us/windows/wsl/install "WSL")<!-- pagebreak -->
+- [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab "Windows Terminal")<!-- pagebreak -->
+- [Node](https://nodejs.org/es/download/ "Node")<!-- pagebreak -->
 
-##Instalacion
+## Instalacion
 
 1.- Abrir el terminal y clonar el repositorio GitHub
 
@@ -75,15 +89,15 @@ Importar la base de datos y los usuarios por defecto.
 $ ./vendor/bin/sail artisan migrate:fresh --seed
 ```
 
-##Arquitectura
+## Arquitectura
 
-##Gato ninja
+## Gato ninja
 
 <p align="center">
   <img src="/public/img/ninjaCat.jpg" />
 </p>
 
-##Powered by 
+## Powered by 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
