@@ -20,19 +20,20 @@
 			<div class="col" id="colFormulario">
 				<div class="espaciador"></div>
 				<div class="form-container">
-					<form>
+					<form action="/login" method="post" enctype="multipart/form-data">
+                        @csrf
 						<img src="img/logo.png" id="logoPNG">
 						<h1 id="loginTittle">LOGIN</h1>
 						<!-- Email input -->
 						<div class="form-outline mb-4">
-							<input type="email" id="form1Example1" class="form-control" />
-							<label class="form-label" for="form1Example1">Email</label>
+							<input type="email" id="formLogin1" class="form-control" name='email'/>
+							<label class="form-label" for="formLogin1">Email</label>
 						</div>
 
 						<!-- Password input -->
 						<div class="form-outline mb-4">
-							<input type="password" id="form1Example2" class="form-control" />
-							<label class="form-label" for="form1Example2">Contraseña</label>
+							<input type="password" id="formLogin2" class="form-control" name='password'/>
+							<label class="form-label" for="formLogin2">Contraseña</label>
 						</div>
 
 						<!-- 2 column grid layout for inline styling -->
@@ -40,8 +41,8 @@
 							<div class="col d-flex justify-content-center">
 								<!-- Checkbox -->
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-									<label class="form-check-label" for="form1Example3"> Recordarme </label>
+									<input class="form-check-input" type="checkbox" id="formLogin3" checked />
+									<label class="form-check-label" for="formLogin3"> Recordarme </label>
 								</div>
 							</div>
 
@@ -61,6 +62,7 @@
 
 
 	<script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 	<script type="text/javascript" src="js/login/login.js"></script>
 </body>
 </html>

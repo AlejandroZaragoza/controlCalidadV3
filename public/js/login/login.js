@@ -4,8 +4,11 @@ var __webpack_exports__ = {};
   !*** ./resources/js/login/login.js ***!
   \*************************************/
 /*$(document).ready(function () {
-     alert(); 
+     alert();
     $(":input").val(null);
 });*/
+$("#formLogin1").on("focusout", function (event) {
+  event.preventDefault();
+});
 /******/ })()
 ;
