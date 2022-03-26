@@ -1,3 +1,103 @@
+# Control de calidad
+<p align="center">
+  <img src="/public/img/SmartDotLogo.png" />
+</p>
+
+- [Control de calidad](#control-de-calidad)
+  - [Disclaimer](#disclaimer)
+  - [Quote](#quote)
+  - [Prerequisites](#prerequisites)
+    - [MacOs](#macos)
+    - [Linux](#linux)
+    - [Windows](#windows)
+  - [Instalacion](#instalacion)
+  - [Arquitectura](#arquitectura)
+  - [Gato ninja](#gato-ninja)
+  - [Powered by](#powered-by)
+  - [License](#license)
+
+------------
+
+## Disclaimer
+Este proyecto es creado con fines educativos y bajo ninguna circunstancia debe llevarse a un ambiente de producción.
+> *This project is created for educational purposes and under no circumstances should it be taken into a production environment.*
+
+------------
+## Quote
+
+
+ > *Cuando este proyecto nacio solo yo y dios sabiamos como funcionaba, ahora solo dios lo sabe...*
+ 
+
+------------
+
+## Prerequisites
+Este proyecto esta construido a base de [Laravel Sail](https://laravel.com/docs/9.x/sail "Laravel Sail"), debido a que la intencion de este proyecto es educativa solo se muestran los pasos para construir el ambiente local.
+
+### MacOs
+- [PhP 8.1](https://formulae.brew.sh/formula/php "PhP 8.1")<!-- pagebreak -->
+- [Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+- [Docker Desktop](https://docs.docker.com/desktop/mac/install/ "Docker Desktop")<!-- pagebreak -->
+- [Node](https://formulae.brew.sh/formula/node#default "Node")<!-- pagebreak -->
+
+### Linux
+- [PhP 8.1](https://www.php.net/downloads.php#gpg-8.0 "PhP 8.1")<!-- pagebreak -->
+- [Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+- [Docker Compose](https://docs.docker.com/compose/install/ "Docker Desktop")<!-- pagebreak -->
+- [Node](https://snapcraft.io/node "Node")<!-- pagebreak -->
+
+### Windows
+- [Composer](https://getcomposer.org/ "Composer")<!-- pagebreak -->
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/ "Docker Desktop")<!-- pagebreak -->
+- [WSL](https://docs.microsoft.com/en-us/windows/wsl/install "WSL")<!-- pagebreak -->
+- [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab "Windows Terminal")<!-- pagebreak -->
+- [Node](https://nodejs.org/es/download/ "Node")<!-- pagebreak -->
+
+## Instalacion
+
+1.- Abrir el terminal y clonar el repositorio GitHub
+
+```
+$ git clone git@github.com:AlejandroZaragoza/controlCalidadV3.git
+```
+2.- Copiar el archivo de entorno .env.example a .env
+
+```
+$ cd controlCalidadV3/
+$ cp .env.example .env
+```
+3.- Instalar dependencias, configurar librerias y generar llave de aplicacion
+
+```
+$ composer install
+$ npm install
+$ php artisan key:generate
+```
+3.1.- Usuarios de Windows y MacOs deben iniciar docker desktop antes del siguiente paso.
+
+4.- Iniciar los servicios
+
+```
+$ ./vendor/bin/sail up
+```
+
+Una vez inicializados todos los contenedores Docker la aplicacion estara disponible en http://localhost.
+
+Importar la base de datos y los usuarios por defecto.
+
+```
+$ ./vendor/bin/sail artisan migrate:fresh --seed
+```
+
+## Arquitectura
+
+## Gato ninja
+
+<p align="center">
+  <img src="/public/img/ninjaCat.jpg" />
+</p>
+
+## Powered by 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -6,58 +106,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 

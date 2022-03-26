@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/login',[loginController::class, 'index']);
+
+Route::post('/login',[loginController::class, 'login']);
