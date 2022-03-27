@@ -17,9 +17,6 @@ const mix = require('laravel-mix');
         //
         ]);
 
- mix.js('resources/js/mdb.min.js', 'public/js')
- .postCss('resources/css/mdb.min.css', 'public/css');
-
  mix.js('resources/js/admin/main.js', 'public/js/admin')
  .postCss('resources/css/admin/main.css', 'public/css/admin');
 
